@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matematika Diskrit - Kelompok 5</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header-->
+    <header class="header">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span style="color: #ffd700; font-size: 24px;">Kelompok 5</span>
+            </a>
+            <!-- Tombol hamburger menu (mobile) -->
+            <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bars" aria-hidden="true">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+                <span class="menu-label">Menu</span>
+            </button>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../../index.html" class="nav-link">
+                            <i class="fa-solid fa-house nav-icon"></i>
+                            <span>Beranda</span>
+                            <span class="arrow-icon">▼</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-book nav-icon"></i>
+                            <span>Materi</span>
+                            <span class="arrow-icon">▼</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="notasi-faktorial.html">Notasi Faktorial</a></li>
+                            <li><a href="koefisien-binomial.html">Koefisien Binomial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kalkulator.html" class="nav-link active">
+                            <i class="fa-solid fa-calculator nav-icon"></i>
+                            <span>Kalkulator</span>
+                            <span class="arrow-icon">▼</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menu-overlay"></div>
+    </header>
+
+    <main class="main-content">
+        <div class="calculator-container">
+            <h1 class="section-title merriweather-title">Kalkulator</h1>
+            
+            <div class="calculator-grid">
+                <!-- Input Section -->
+                <div class="calc-section input-section">
+                    <h2 class="calc-title">Input Data</h2>
+                    <div class="input-group">
+                        <label for="calculationType">Jenis Perhitungan:</label>
+                        <select id="calculationType" class="calc-input">
+                            <optgroup label="Permutasi">
+                                <option value="permutation">Permutasi Biasa P(n,r)</option>
+                                <option value="permutation_same">Permutasi dengan Unsur Sama</option>
+                                <option value="circular">Permutasi Siklis</option>
+                            </optgroup>
+                            <optgroup label="Kombinasi & Binomial">
+                                <option value="combination">Kombinasi Biasa C(n,r)</option>
+                                <option value="binomial_coefficient">Koefisien Binomial (n k)</option>
+                                <option value="combination_repeat">Kombinasi dengan Pengulangan</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="n">Nilai n (Total Objek):</label>
+                        <input type="number" id="n" class="calc-input" min="0">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="r">Nilai r (Objek Diambil):</label>
+                        <input type="number" id="r" class="calc-input" min="0">
+                    </div>
+
+                    <div id="sameElementsInput" class="input-group" style="display: none;">
+                        <label>Jumlah Unsur Sama:</label>
+                        <input type="text" id="sameElements" class="calc-input" placeholder="Contoh: 2,3,1">
+                    </div>
+
+                    <button onclick="calculate()" class="cta-button calc-button">
+                        Hitung
+                    </button>
+                </div>
+
+                <!-- Result Section -->
+                <div class="calc-section result-section">
+                    <div class="formula-card">
+                        <h2 class="calc-title">Rumus</h2>
+                        <div id="formula" class="math-formula formula" style="text-align:center;"></div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h2 class="calc-title">Hasil</h2>
+                        <div id="result" class="result-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <h2 class="calc-title">Riwayat Perhitungan</h2>
+                <div id="history" class="history-container"></div>
+                <button onclick="clearHistory()" class="clear-button">
+                    Hapus Riwayat
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section" style="text-align: center; width: 100%;">
+                <p style="font-weight: 800;">Tugas MTD Proyek Akhir Kelompok 5</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

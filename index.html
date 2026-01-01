@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Meta dan link CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok 5</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Merriweather untuk heading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header: Navbar dan logo -->
+    <header class="header">
+        <div class="nav-container">
+            <!-- Logo text -->
+            <a href="index.html" class="logo">
+                <span style="color: #ffd700; font-size: 24px;">Kelompok 5</span>
+            </a>
+            <!-- Tombol hamburger menu (mobile) -->
+            <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bars" aria-hidden="true">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+                <span class="menu-label">Menu</span>
+            </button>
+
+            <!-- Navigasi utama -->
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" data-page="home">
+                            <i class="fa-solid fa-house nav-icon"></i>
+                            <span>Beranda</span>
+                            <span class="arrow-icon">▼</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-page="materi">
+                            <i class="fa-solid fa-book nav-icon"></i>
+                            <span>Materi</span>
+                            <span class="arrow-icon">▼</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="assets/pages/notasi-faktorial.html">Notasi Faktorial</a></li>
+                            <li><a href="assets/pages/koefisien-binomial.html">Koefisien Binomial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="assets/pages/kalkulator.html" class="nav-link" data-page="kalkulator">
+                            <i class="fa-solid fa-calculator nav-icon"></i>
+                            <span>Kalkulator</span>
+                            <span class="arrow-icon">▼</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menu-overlay"></div>
+    </header>
+
+    <main class="main-content">
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Materi Kelompok 5</h1>
+                    <p>Kombinatorial</p>
+                    <a href="#topics" class="cta-button">Mulai Belajar</a>
+                </div>
+            </section>
+
+            <section id="topics" class="exhibitions">
+                <h2 class="section-title merriweather-title">Materi Pembelajaran</h2>
+                <div class="exhibitions-grid exhibitions-grid-3">
+                    <!-- Notasi Faktorial -->
+                    <div class="exhibition-card hover-red video-card" data-video-id="eACEgkHwXWI" data-video-title="Notasi Faktorial">
+                        <div class="card-image video-thumbnail" style="background-image: url('https://img.youtube.com/vi/eACEgkHwXWI/hqdefault.jpg'); background-size: cover; background-position: center;">
+                            <div class="video-overlay"></div>
+                            <i class="fas fa-play-circle" style="font-size: 4rem; color: #ffffff; position: absolute; z-index: 10;"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Notasi Faktorial</h3>
+                            <p>Pelajari konsep dasar notasi faktorial dalam matematika diskrit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kombinasi -->
+                    <div class="exhibition-card hover-yellow video-card" data-video-id="fFamQNRWDBY" data-video-title="Kombinasi">
+                        <div class="card-image video-thumbnail" style="background-image: url('https://img.youtube.com/vi/fFamQNRWDBY/hqdefault.jpg'); background-size: cover; background-position: center;">
+                            <div class="video-overlay"></div>
+                            <i class="fas fa-play-circle" style="font-size: 4rem; color: #ffffff; position: absolute; z-index: 10;"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Kombinasi</h3>
+                            <p>Pelajari konsep dasar kombinasi dalam matematika diskrit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Koefisien Binomial -->
+                    <div class="exhibition-card hover-green video-card" data-video-id="RMTE4w8XUTs" data-video-title="Koefisien Binomial">
+                        <div class="card-image video-thumbnail" style="background-image: url('https://img.youtube.com/vi/RMTE4w8XUTs/hqdefault.jpg'); background-size: cover; background-position: center;">
+                            <div class="video-overlay"></div>
+                            <i class="fas fa-play-circle" style="font-size: 4rem; color: #ffffff; position: absolute; z-index: 10;"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Koefisien Binomial</h3>
+                            <p>Memahami konsep dan aplikasi koefisien binomial dalam ekspansi aljabar.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Modal Popup -->
+            <div id="videoModal" class="video-modal">
+                <div class="video-modal-content">
+                    <button class="video-modal-close" id="closeVideoModal" aria-label="Tutup video">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="video-modal-title" id="videoModalTitle"></div>
+                    <div class="video-modal-player">
+                        <iframe id="videoPlayer" width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section" style="text-align: center; width: 100%;">
+          <p style="font-weight: 800;">Tugas MTD Proyek Akhir Kelompok 5</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/scripts/main.js"></script>
+
+</body>
+</html>

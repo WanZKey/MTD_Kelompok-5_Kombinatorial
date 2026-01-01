@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Kelompok 5</title>
+      <link rel="stylesheet" href="../styles/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="../../index.html" class="logo">
+          <span style="color: #ffd700; font-size: 24px">Kelompok 5</span>
+        </a>
+        <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+          <span class="bars" aria-hidden="true">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </span>
+          <span class="menu-label">Menu</span>
+        </button>
+        <nav>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="../../index.html" class="nav-link" data-page="home">
+                <i class="fa-solid fa-house nav-icon"></i>
+                <span>Beranda</span>
+                <span class="arrow-icon">▼</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active" data-page="materi">
+                <i class="fa-solid fa-book nav-icon"></i>
+                <span>Materi</span>
+                <span class="arrow-icon">▼</span>
+              </a>
+              <ul class="submenu">
+                <li><a href="notasi-faktorial.html">Notasi Faktorial</a></li>
+                <li><a href="koefisien-binomial.html">Koefisien Binomial</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="kalkulator.html" class="nav-link" data-page="kalkulator">
+                <i class="fa-solid fa-calculator nav-icon"></i>
+                <span>Kalkulator</span>
+                <span class="arrow-icon">▼</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="menu-overlay"></div>
+    </header>
+
+    <main class="main-content">
+      <div class="content-container">
+        <!-- Notasi Faktorial Section -->
+        <section class="content-section">
+          <div class="content-grid single-column">
+            <div class="content-text">
+              <h2 class="section-title">Notasi Faktorial</h2>
+              <p class="lead-text">
+                Notasi Faktorial merupakan Perkalian bilangan dengan bilangan berurutan dari bilangan n
+                terus mengecil sampai bilangan 1 (satu).
+                Notasi faktorial ditulis dengan tanda seru (!).
+              </p>
+              <div class="content-visual">
+                <div class="example-card mini-card">
+                  <h3>Rumus:</h3>
+                  <div class="math-formula large-formula mini-card">
+                    <p>$$n! = n \times (n - 1) \times (n - 2) \times \ldots \times 2 \times 1$$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="example-card mini-card">
+                <h3>Contoh Soal:</h3>
+                <img src="../images/notasi_faktorial/contoh-faktorial-1.png" alt="Notasi Faktorial">
+              </div>
+              <div class="example-card mini-card">
+                <h3>Proses Penyelasan:</h3>
+                <p>1. Penjabaran Nilai Faktorial:$$\frac{4!}{2!} = \frac{4 \times 3 \times 2 \times 1}{2 \times 1}$$</p>
+                <o>2. Proses Penyederhanaan (Coret Angka yang Sama):$$\frac{4 \times 3 \times \cancel{2} \times \cancel{1}}{\cancel{2} \times \cancel{1}}$$</o>
+                <p>3. Hasil Akhir Setelah Penyederhanaan:$$4 \times 3 = 12$$</p>
+                <h3>Penjelasan:</h3>
+                 <ul>
+                  <li>
+                    Langkah 1 (Definisi Faktorial): Simbol tanda seru \(!\) berarti kita mengalikan angka tersebut dengan angka-angka bulat di bawahnya hingga mencapai angka 1. 
+                    Jadi, \(4!\) dijabarkan menjadi \(4 \times 3 \times 2 \times 1\), dan \(2!\) dijabarkan menjadi \(2 \times 1\).
+                  </li>
+                  <li>
+                    Langkah 2 (Penyederhanaan): Setelah menjabarkan faktorial, kita dapat menyederhanakan pecahan dengan mencoret angka-angka yang sama di pembilang dan penyebut. 
+                    Dalam hal ini, angka \(2\) dan \(1\) di pembilang dan penyebut dapat dicoret karena mereka muncul di kedua tempat.
+                  </li>
+                  <li>
+                    Langkah 3 (Perhitungan Akhir): Setelah penyederhanaan, kita hanya perlu mengalikan angka-angka yang tersisa di pembilang, yaitu \(4\) dan \(3\). 
+                    Hasil dari \(4 \times 3\) adalah \(12\), yang merupakan hasil akhir dari ekspresi \(\frac{4!}{2!}\).
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Permutasi Section -->
+        <section class="content-section">
+          <div class="content-grid single-column">
+            <div class="content-text">
+              <h2 class="section-title">Permutasi</h2>
+              <p class="lead-text">
+                Permutasi adalah susunan atau pengaturan ulang dari sejumlah objek atau elemen dalam suatu urutan tertentu.
+              </p>
+              <div class="content-visual">
+                <div class="example-card mini-card">
+                  <h3>Rumus:</h3>
+                  <div class="math-formula large-formula mini-card">
+                    <p>$$nP_r = \frac{n!}{(n - r)!}$$</p>
+                  </div>
+                  <h3 style="margin-top: 16px;">Keterangan:</h3>
+                  <div class="math-formula mini-card">
+                    <p>n = Jumlah total objek dalam kumpulan</p>
+                    <p>r = Jumlah objek yang dipilih dari kumpulan</p>
+                  </div>
+                </div>
+              </div>
+              <div class="example-card mini-card">
+                <h3>Contoh Soal:</h3>
+                <img src="../images/notasi_faktorial/contoh-permutasi.png" alt="Contoh Permutasi">
+              </div>
+               <div class="example-card mini-card">
+                <h3>Proses Penyelasan:</h3>
+                <p>1. Masukkan ke Rumus Permutasi:$$_{10}P_{2} = \frac{10!}{(10 - 2)!}$$</p>
+                <p>2. Hitung Pengurangan dalam Kurung:$$_{10}P_{2} = \frac{10!}{8!}$$</p>
+                <p>3. Jabarkan Pembilang hingga Angka yang Sama dengan Penyebut:$$_{10}P_{2} = \frac{10 \times 9 \times \cancel{8!}}{\cancel{8!}}$$</p>
+                <p>4. Hasil Akhir Setelah Penyederhanaan:$$_{10}P_{2} = 10 \times 9 = 90$$</p>
+                <h3>Penjelasan:</h3>
+                <ul>
+                  <li>
+                    Langkah 1 (Definisi Rumus): Permutasi \(_{10}P_{2}\) dihitung dengan membagi faktorial angka total (\(10!\)) dengan faktorial dari selisihnya (\(10-2\))!. 
+                    Hasil pengurangannya adalah \(8!\).
+                  </li>
+                  <li>
+                    Langkah 2 (Pembagian/Penyederhanaan): Jabarkan \(10!\) secara menurun, namun cukup berhenti di angka \(8!\) karena di bagian bawah (penyebut) sudah ada \(8!\). 
+                    Dengan begitu, kita bisa langsung "mencoret" \(8!\) di atas dan di bawah.
+                  </li>
+                  <li>
+                    Langkah 3 (Perkalian Sisa): Setelah bagian \(8!\) ditiadakan, kita hanya menyisakan perkalian sederhana yaitu \(10 \times 9\). 
+                    Hasil akhir dari perhitungan ini adalah 90.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Kombinasi Section -->
+        <section class="content-section">
+          <div class="content-grid single-column">
+            <div class="content-text">
+              <h2 class="section-title">Kombinasi</h2>
+              <p class="lead-text">
+                Kombinasi adalah pemilihan objek tanpa memperhatikan urutannya.
+                Kombinasi berbeda dengan permutasi yang memperhatikan urutan objeknya.
+              </p>
+              <div class="content-visual">
+                <div class="example-card mini-card">
+                  <h3>Rumus:</h3>
+                  <div class="math-formula large-formula mini-card">
+                    <p>$$nC_r = \frac{n!}{r!(n - r)!}$$</p>
+                  </div>
+                  <h3 style="margin-top: 16px;">Keterangan:</h3>
+                  <div class="math-formula mini-card">
+                    <p>n = Jumlah total objek dalam kumpulan</p>
+                    <p>r = Jumlah objek yang dipilih dari kumpulan</p>
+                  </div>
+                </div>
+              </div>
+              <div class="example-card mini-card">
+                <h3>Contoh Soal:</h3>
+                <img src="../images/notasi_faktorial/contoh-kombinasi.png" alt="Contoh Kombinasi">
+              </div>
+               <div class="example-card mini-card">
+                <h3>Proses Penyelasan:</h3>
+                <p>1. Masukkan ke Rumus Kombinasi:$$_5C_4 = \frac{5!}{(5 - 4)! \ 4!}$$</p>
+                <p>2. Operasi Pengurangan:$$_5C_4 = \frac{5!}{1! \ 4!}$$</p>
+                <p>3. Penjabaran dan Penyederhanaan:$$_5C_4 = \frac{5 \times \cancel{4!}}{1! \ \cancel{4!}}$$</p>
+                <p>4. Hasil Akhir Setelah Penyederhanaan:$$_5C_4 = \frac{5}{1} = 5$$</p>
+                <h3>Penjelasan:</h3>
+                <ul>
+                  <li>
+                    Langkah 1 (Definisi Rumus): Kombinasi \(_{5}C_{4}\) dihitung dengan membagi faktorial angka total (\(5!\)) dengan faktorial dari selisihnya (\(5-4\))!. 
+                    Hasil pengurangannya adalah \(1!\).
+                  </li>
+                  <li>
+                    Langkah 2 (Pembagian/Penyederhanaan): Jabarkan \(5!\) menjadi \(5 \times 4!\). 
+                    Karena di bagian bawah (penyebut) sudah ada \(4!\), kita bisa langsung "mencoret" atau meniadakan \(4!\) tersebut agar perhitungan lebih sederhana.
+                  </li>
+                  <li>
+                    Langkah 3 (Hasil Akhir): Setelah angka yang sama dicoret, tersisa angka \(5\) di atas dan \(1!\) (yang bernilai 1) di bawah. 
+                    Hasil dari \(5\) dibagi 1 adalah 5.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section" style="text-align: center; width: 100%">
+          <p style="font-weight: 800">Tugas MTD Proyek Akhir Kelompok 5</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>
